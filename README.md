@@ -1,2 +1,2 @@
-# axel-boot
-aaaaa
+# dark-bot
+Apenas uma tradução.
