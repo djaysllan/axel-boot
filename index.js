@@ -174,6 +174,7 @@ async function starts() {
 					client.sendMessage(from, help(prefix), text)
 					break
 				case 'madara':
+					if (!isOwner) return reply(mess.only.ownerB)
 					client.sendMessage(from, madara(prefix), text)
 					break
 				case 'info':
