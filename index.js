@@ -173,6 +173,10 @@ async function starts() {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
+                                case 'speed':
+                                case 'ping':
+                                       await client.sendText(from, `Pong!!!!\nSpeed: ${processTime(t, moment())} _Second_`)
+                                        break
 				case 'madara':
 					if (!isOwner) return reply(mess.only.ownerB)
 					client.sendMessage(from, madara(prefix), text)
