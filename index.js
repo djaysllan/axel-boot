@@ -6,7 +6,7 @@ const {
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
-const { help } = require('./src/madara')
+const { madara } = require('./src/madara')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -172,6 +172,9 @@ async function starts() {
 				case 'help':
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
+					break
+				case 'madara':
+					client.sendMessage(from, madara(prefix), text)
 					break
 				case 'info':
 					me = client.user
