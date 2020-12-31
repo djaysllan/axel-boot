@@ -175,7 +175,7 @@ async function starts() {
 					break
                                 case 'speed':
                                 case 'ping':
-                                       await client.sendText(from, `Pong!!!!\nSpeed: ${processTime(t, moment())} _Second_`)
+                                       await client.sendText(from, `Ping!!!!\nvelocidade: ${processTime(t, moment())} _Second_`)
                                         break
 				case 'madara':
 					if (!isOwner) return reply(mess.only.ownerB)
