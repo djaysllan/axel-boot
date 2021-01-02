@@ -363,7 +363,7 @@ async function starts() {
 					})
                  	                break
 				case 'neko':
-					axios.get(`https://arugaz.herokuapp.com/api/nekonime`).then((res) => {
+                                        neko = await kagApi.neko(`https://arugaz.herokuapp.com/api/nekonime`)
          			imageToBase64(res.data.result)
          			.then((ress) => {
             			buf = Buffer.from(ress, 'base64');
