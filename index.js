@@ -368,8 +368,6 @@ async function starts() {
          			.then((ress) => {
             			buf = Buffer.from(ress, 'base64');
             			client.sendMessage(from, buf, image, {quoted: mek, caption: "*_Imagem enviada com sucesso!_*"})
-
-         				});
 					break
 				case 'hilih':
 					if (args.length < 1) return reply('Teksnya mana um?')
