@@ -361,6 +361,15 @@ async function starts() {
 						buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Jangan jadiin bahan buat comli om'})
 					})
+                 	                break
+				case 'neko':
+					axios.get(`https://arugaz.herokuapp.com/api/nekonime`).then((res) => {
+         			imageToBase64(res.data.result)
+         			.then((ress) => {
+            			buf = Buffer.from(ress, 'base64');
+            			client.sendMessage(from, buf, image, {quoted: mek, caption: "*_Imagem enviada com sucesso!_*"})
+         				});
+      				});
 					break
 				case 'hilih':
 					if (args.length < 1) return reply('Teksnya mana um?')
